@@ -1,0 +1,21 @@
+<?php
+	include ("db.php");
+	include_once ("./php/preconfig.php");
+//	include "SessionSet.php";
+	$insert="INSERT INTO `wish` (`userID`,`name`,`price`,`deadline`,`reason`,`describe`) VALUES('".$_SESSION['oauth2']['user_id']."','".$_POST["WishName"]."','".$_POST["WishPrice"]."','".$_POST["WishDeadline"]."','".$_POST["WishReason"]."','".$_POST["WishDescribe"]."')";
+
+	$result = mysql_query($insert);
+	if($result && mysql_affected_rows()>0)
+	{
+		echo "数据记录插入成功，最后一条插入的数据记录ID为：".mysql_insert_id()."<br>";
+	}
+	else
+	{
+		echo "插入记录失败，错误号：".mysql_errno()."，错误原因：".mysql_error()."<br>";
+	}
+	mysql_free_result($result);
+	mysql_close($link);
+
+?>
+
+

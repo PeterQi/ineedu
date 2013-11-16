@@ -1,0 +1,113 @@
+body{     
+    width:760px;
+    height:600px;
+	margin: 0;                   
+    padding: 0;                   
+	text-align: center;           
+	font: 15px Arial,宋体;  
+}
+
+div#container{  
+	width:760px;    
+    height:600px;
+	margin:0 auto;
+    border:1px solid #DBDBD0;
+}
+
+div#header{                   
+	float:left;                   
+	width:760px;   
+    height:30px;     
+}
+div#logo{                     
+	float:left;                   
+	width:150px;                
+	height:30px; 
+    line-height:30px;
+    font-size:29px;
+    font-weight:bold;
+    color:#808080;
+}
+div#banner{                   
+	float:left;            
+	width:400px; 
+    height:30px;
+    line-height:30px;
+}
+
+div#hi{
+    float:right;
+    width:50px;
+    height:30px;
+    line-height:30px;
+    padding:3px;
+}
+
+.gap {                          
+	float:left;                  
+	height:5px;            
+	width:100%;                  
+	overflow:hidden;             
+	clear:both;    
+}
+
+div#navfirst{
+    float:left;
+    width:100%;
+    height:30px;
+}
+
+div#navfirst ul#menu{
+    float:right;
+    list-style:none;
+    width:600px;
+    margin:0;
+    padding:0;
+    overflow:hidden;
+}
+
+div#navfirst ul#menu li{
+    float:left;
+}
+
+div#content{
+    position:absolute;
+    top:70px;
+    float:left;
+    width:760px;
+    height:530px;
+    border:1px solid #DBDBD0;
+}
+
+/************************登录界面***************************/
+#frm_login{
+    position:absolute;
+    width:250px;
+    height:300px;
+    top:80px;
+    border:1px solid #DBDBD0;
+    background-color:#ffffff;
+}
+
+/************************许愿界面***************************/
+#w_content{
+    margin:0 0 0 0;
+    position:absolute;
+    left:179px;
+    width:400px;
+    height:530px;
+    border:1px solid #DBDBD0;
+    background-color:#BEBEBE;
+}
+
+/******************支付界面*******************/
+#frm_pay{
+    position:absolute;
+    width:250px;
+    height:300px;
+    top:80px;
+    border:1px solid #DBDBD0;
+    background-color:#ffffff;
+}
+
+

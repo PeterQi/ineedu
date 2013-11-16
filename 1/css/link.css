@@ -1,0 +1,34 @@
+div#hi a{ 
+    color:#808080;
+    font-size:14px;
+    text-decoration:none;
+}
+
+div#navfirst ul#menu li a:link,div#navfirst ul#menu li a:visited{
+    display:block;
+    width:110px;
+    font-weight:normal;
+    font-size:18px;
+    color:#ffffff;
+    background-color:#bebebe;
+    text-align:center;
+    padding:5px;
+    text-decoration:none;
+    text-transform:uppercase;
+}
+
+div#navfirst ul#menu li a:hover,div#navfirst ul#menu li a:active{
+    background:#cc0000;
+}
+
+div#logout a:link,div#logout a:visited,div#logout a:hover,div#logout a:active{
+    float:right;
+    width:36px;
+    height:30px;
+    color:#808080;
+    font-size:14px;
+    padding:3px;
+    text-decoration:none;
+    text-transform:uppercase;
+}
+
