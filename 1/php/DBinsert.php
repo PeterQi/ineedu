@@ -1,6 +1,39 @@
 <?php
 	include ("db.php");
-	include_once ("preconfig.php");
+    include_once ("preconfig.php");
+?>
+<html>
+	<head>
+        <script type="text/javascript" language="javascript" src="../js/check.js"></script>
+		<title>插入愿望</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link rel="stylesheet" href="../css/layout.css" type="text/css">
+        <link rel="stylesheet" href="../css/link.css" type="text/css">
+        <link rel="stylesheet" href="../css/font.css" type="text/css">
+        <link rel="stylesheet" href="../css/style.css" type="text/css">
+	</head>
+    <body>
+        <div id="container">
+            <div id="headwrap">
+                <div class="head">
+                    <a href="../index.php" class="logo">
+                        <img src="../image/logo.jpg" title="I Need U">
+                    </a>
+                    <div class="head-nav">
+                        <ul class="head-nav-menu">
+                            <li><a href="../index.php">首页</a></li>
+                            <li><a href="./Search.php">搜索</a></li>
+                            <li><a href="../index.php?update=1">更新</a><li>
+                            <li><a href="./insert.php">发布愿望</a></li>		
+		                    <li><a href="./friends.php">关注的人</a></li>
+		                    <li><a href="./MyWish.php">我的愿望</a></li>
+                            <li><a href="./IPayed.php">我支付的</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="content">  
+<?php
 //	include "SessionSet.php";
 	$insert="INSERT INTO `wish` (`userID`,`name`,`price`,`deadline`,`reason`,`describe`,`recommend`) VALUES('".$_SESSION['oauth2']['user_id']."','".$_POST["WishName"]."','".$_POST["WishPrice"]."','".$_POST["WishDeadline"]."','".$_POST["WishReason"]."','".$_POST["WishDescribe"]."','".$_POST["Recommend"]."')";
 
@@ -111,6 +144,9 @@
 
 <h2>发送微博</h2>
 <form action="Weibo.php" method="post">
-<input type="text" name="text" value="我有一个愿望 “<?php echo $_POST["WishName"]."”，快来看看吧！http://apps.weibo.com/kingguko"; ?>" style=" width:300px" />
+<input type="text" name="text" value="我有一个愿望 “<?php echo $_POST["WishName"]."”，快来看看吧！http://apps.weibo.com/kingguko?wishID=$wishID"; ?>" style=" width:300px" />
 &nbsp;<input type="submit" />
 </form>
+        </div>
+    </div>
+</html>

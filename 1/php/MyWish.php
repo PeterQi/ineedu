@@ -16,21 +16,23 @@
     </head>
     <body>
         <div id="container">
-            <div id="header">
-                <div id="logo">I Need you</div>
-                <div id="banner"><h2>我的愿望清单</h2></div>
-                <div id="hi">
+            <div id="headwrap">
+                <div class="head">
+                    <a href="../index.php" class="logo">
+                        <img src="../image/logo.jpg" title="I Need U">
+                    </a>
+                    <div class="head-nav">
+                        <ul class="head-nav-menu">
+                            <li><a href="../index.php">首页</a></li>
+                            <li><a href="./Search.php">搜索</a></li>
+                            <li><a href="../index.php?update=1">更新</a><li>
+                            <li><a href="./insert.php">发布愿望</a></li>		
+		                    <li><a href="./friends.php">关注的人</a></li>
+		                    <li><a href="./MyWish.php">我的愿望</a></li>
+                            <li><a href="./IPayed.php">我支付的</a></li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-            <div class="gap"></div>
-            <div id="navfirst">
-                <ul id="menu">
-                    <li><a href="../php/insert.php">发布愿望</a></li>		
-		            <li><a href="../php/friends.php">关注的人</a></li>
-		            <li><a href="../php/MyWish.php">我的愿望</a></li>
-	                <li><a href="../php/IPayed.php">我支付的</a></li>
-                    <li><a href="../php/insert.php">关于我们</a></li>
-                </ul>
             </div>
             <div id="content">
                 <?php
@@ -46,12 +48,14 @@
 		                }
 		                else
                         {
-		                    echo	'<table align="center" width="600" border="1" cellpadding="2" cellspacing="0">';
-                            echo    '<th>愿望名</th><th>价格</th><th>截止日期</th><th>理由</th><th>描述</th><th>发布时间</th>';
+                            echo    '<div class="mywish-lish"><ul>';
+		                    //echo	'<table align="center" width="600" border="1" cellpadding="2" cellspacing="0">';
+                            //echo    '<th>愿望名</th><th>价格</th><th>截止日期</th><th>理由</th><th>描述</th><th>发布时间</th>';
         
                             while($row = mysql_fetch_assoc($result))
-			                {
-				                echo '<tr>';
+                            {
+                                echo '<div class="mywish-one"><li><ul>';
+				                //echo '<tr>';
 		 			            foreach($row as $key => $data)
 					            {
 									if($key=='ID')
@@ -61,15 +65,26 @@
 									else
 									{
 										if($key=='name')
-											echo '<td><a href="'.$url.'">'.$data.'</a></td>';
-										else	
-							         	    echo '<td>'.$data.'</td>';	
+											echo '<li>愿望名称：<a href="'.$url.'">'.$data.'</a></li>';
+										else if($key=='price')	
+                                            echo '<li>大约金额：'.$data.'</li>';
+                                        else if($key=='deadline')	
+                                            echo '<li>截止日期：'.$data.'</li>';    
+                                        else if($key=='reason')	
+                                            echo '<li>许愿原因：'.$data.'</li>';
+                                        else if($key=='describe')	
+                                            echo '<li>愿望描述：'.$data.'</li>';
+                                        else
+							         	    echo '<li>许愿日期：'.$data.'</li>';
 									}
-					            }
-				                echo '</tr>';
+                                }
+                                echo '</ul></li></div>';
+				                //echo '</tr>';
 			                }	
-			                echo '</table>';		
+                            //echo '</table>';
+                            echo '</ul></div>';		
 	                	}
+						echo '<a href="Weibo.php?comment=1">分享</a>';
 		                mysql_free_result($result);
 		                mysql_close($link);
 	                    }
@@ -77,7 +92,7 @@
 	                {
 		                echo "查询记录失败，错误号：".mysql_errno()."，错误原因：".mysql_error()."<br>";
 	                }
-			mysql_close($link);
+                    mysql_close($link);
                 ?>
             </div>
         </div>

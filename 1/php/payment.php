@@ -1,4 +1,5 @@
 <?php
+	include "alipay_no.php";
 	include_once ("preconfig.php");
 	include ("db.php");	
 //	include_once ("SessionSet.php");
@@ -45,7 +46,7 @@
                         <label for="wishID">愿望编号</label>
                         <input type="text" name="WishID" id="payWish" />
                     </div> */
-		$query="select `deadline`,`recommend` from `wish` WHERE `ID`=".$_GET['WishID'];
+		$query="select `deadline`,`recommend`,`userID` from `wish` WHERE `ID`=".$_GET['WishID'];
 		$result = mysql_query($query);	
 		if($result)
 		{
@@ -59,12 +60,23 @@
 				$row = mysql_fetch_row($result);
 				$deadline=$row[0];
 				$recPrice=$row[1];
+				$wishMan=$row[2];
 				$time=date("Y-m-d H:i:s",time());
 				if($time>$deadline)
 				{
-					echo'此愿望已不能支付<br/>'; 
+					echo '此愿望已不能支付<br/>'; 
 					echo '<a href="javascript:history.go(-1);" title="返回上一页"><button type="button type="button">返回</button></a>';
 					die();
+				}
+				$selectAli=mysql_query("select `alipay_no` from `user_alipay_no` where `userID`=".$wishMan);
+				if($selectAli&&mysql_affected_rows()>0)
+				{
+					$alipay_no=mysql_fetch_row($selectAli);
+					echo '他的支付宝：'.$alipay_no[0].'<br>请到<a href="http://www.alipay.com" target="_blank">支付宝</a>页面进行操作后把结果输在这里，主人将根据您的支付宝账号确认您的支付。';
+				}
+				else
+				{
+					echo '他还没有告诉我们他的支付宝。<br/>';
 				}
 			}
 		}

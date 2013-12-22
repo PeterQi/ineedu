@@ -16,37 +16,36 @@
 }
 
 /*************许愿界面***************/
-#w_content div.wish_pag span{
+#w_content .wish_pag span{
     font-weight:normal;
-    font-size:18px;
-    color:#FFFFFF;
+    font-size:16px;
+    color:#333333;
+    width:80px;
+    height:30px;
+    white-space: nowrap;
+    float: left;
+    margin: 0px 0px 0px 0px;
+    display:block;
 }
 
-#w_content div.w_reason span{
+#w_content .smallbox{
     font-weight:normal;
-    font-size:18px;
-    color:#FFFFFF;
+    font-size:16px;
+    color:#333333;
+    width:80px;
+    height:30px;
+    line-height:30px;
+    text-align:left;
+    float: left;
+    margin: 0px 0px 0px 0px;
 }
-
-#w_content div.w_describe span{
-    font-weight:normal;
-    font-size:18px;
-    color:#FFFFFF;
-}
-
-#w_content div.w_reprice span{
-    font-weight:normal;
-    font-size:18px;
-    color:#FFFFFF;
-}
-
 
 #w_content div.w_button span{
     font-weight:normal;
-    font-size:17px;
+    font-size:16px;
 }
 
 #content div.btns span{
     font-weight:normal;
-    font-size:17px;
+    font-size:16px;
 }

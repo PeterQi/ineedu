@@ -19,7 +19,7 @@
 				$row = mysql_fetch_row($result);
 				$pr=$row[0];
 				$deadline=$row[1];
-				$time=date("Y-m-d",time());
+				$time=date("Y-m-d H:i:s",time());
 				if($time>$deadline)
 				{
 					echo'此愿望已不能支付<br/>'; 
@@ -30,7 +30,7 @@
 					$query="select `userID`,`Payed_amount` from `payment` WHERE wishID=".$_GET['WishID'];
 					$result = mysql_query($query);
 					$payed=0;
-					if(mysql_affected_rows()>0)
+					if($result && mysql_affected_rows()>0)
 					{
 						while($row = mysql_fetch_row($result))
 						{

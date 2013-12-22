@@ -39,20 +39,22 @@
 
 /******************许愿界面*******************/
 #w_content .wish_pag{
-    width:388px;
-    height:40px;
-    line-height:40px;
+    width:488px;
+    height:30px;
+    line-height:30px;
     padding:5px;
     margin:0 0 0 0;
-    border:1px solid #DBDBD0;
+    border:0px;
+    text-align:left;
 }
 
 #w_content input.w_input
 {
-    width:250px;
+    width:330px;
     height:22px;
-    padding:3px 2px 0;
+    padding:2px 2px 2px;
     border:2px solid #BEBEBE;
+    float:left;
 }
 
 #w_notice1{
@@ -80,66 +82,71 @@
     margin:0 0 0 0;
 }
 
+div.timeoption{
+    width:408px;
+    height:30px;
+    line-height:30px;
+    float:left;
+    text-align:left;
+}
 
 #w_content .w_reason{
-    width:388px;
-    height:100px;
-    line-height:100px;
+    width:488px;
+    height:88px;
     padding:5px;
-    border:1px solid #DBDBD0;
     
 }
 
-#w_content input.rea_input{
-    width:250px;
+#w_content .w_reason textarea{
+    width:330px;
     height:80px;
-    padding:3px 2px 0;
+    padding:2px 2px 2px;
     border:2px solid #BEBEBE;
+    float: left;
 }
 
 #w_content .w_describe{
-    width:388px;
-    height:150px;
-    line-height:120px;
+    width:488px;
+    height:138px;
     padding:5px;
-    border:1px solid #DBDBD0;
 }
 
-#w_content input.des_input{
-    width:250px;
+#w_content .w_describe textarea{
+    width:330px;
     height:130px;
-    padding:3px 2px 0;
+    padding:2px 2px 2px;
     border:2px solid #BEBEBE;
+    float: left;
 
 }
 
 #w_content .w_reprice{
-    width:388px;
-    height:40px;
-    line-height:40px;
+    width:488px;
+    height:30px;
+    line-height:0px;
     padding:5px;
-    border:1px solid #DBDBD0;
 }
 
 #w_content input.re_input{
-    width:250px;
+    width:330px;
     height:22px;
-    padding:3px 2px 0;
+    padding:2px 2px 2px;
     border:2px solid #BEBEBE;
+    float: left;
 }
 
 #w_content .w_button{
-    width:388px;
-    height:50px;
-    line-height:50px;
-    padding:5px;
-    border:1px solid #DBDBD0;
+    width:488px;
+    height:30px;
+    line-height:Ø0px;
+    padding: 5px 10px 5px 82px;
 }
 
 .w_button button.btn_wish{
     margin:5px;
     width:162px;
     height:30px;
+    float: left;
 }
 
 /**************支付界面*************/

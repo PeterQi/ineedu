@@ -16,21 +16,23 @@
     </head>
     <body>
         <div id="container">
-            <div id="header">
-                <div id="logo">I Need you</div>
-                <div id="banner"><h2>愿望清单</h2></div>
-                <div id="hi">
+            <div id="headwrap">
+                <div class="head">
+                    <a href="../index.php" class="logo">
+                        <img src="../image/logo.jpg" title="I Need U">
+                    </a>
+                    <div class="head-nav">
+                        <ul class="head-nav-menu">
+                            <li><a href="../index.php">首页</a></li>
+                            <li><a href="./Search.php">搜索</a></li>
+                            <li><a href="../index.php?update=1">更新</a><li>
+                            <li><a href="./insert.php">发布愿望</a></li>		
+		                    <li><a href="./friends.php">关注的人</a></li>
+		                    <li><a href="./MyWish.php">我的愿望</a></li>
+                            <li><a href="./IPayed.php">我支付的</a></li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-            <div class="gap"></div>
-            <div id="navfirst">
-                <ul id="menu">
-                    <li><a href="../php/insert.php">发布愿望</a></li>		
-		            <li><a href="../php/friends.php">关注的人</a></li>
-		            <li><a href="../php/MyWish.php">我的愿望</a></li>
-	                <li><a href="../php/IPayed.php">我支付的</a></li>
-                    <li><a href="../php/insert.php">关于我们</a></li>
-                </ul>
             </div>
             <div id="content">
                 <?php

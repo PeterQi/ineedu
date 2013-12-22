@@ -1,34 +1,28 @@
-div#hi a{ 
-    color:#808080;
-    font-size:14px;
-    text-decoration:none;
+div.head a.logo{                     
+	margin: 1px 0px 0px 0px;        
+	width:130px;                
+	height:30px; 
+    float: left;
+    display: block;
+    padding: 0px;
 }
 
-div#navfirst ul#menu li a:link,div#navfirst ul#menu li a:visited{
+div.head-nav ul.head-nav-menu li a:link,div.head-nav ul.head-nav-menu li a:visited{
     display:block;
-    width:110px;
+    width:77px;
+    height:20px;
+    line-height:20px;
     font-weight:normal;
-    font-size:18px;
-    color:#ffffff;
-    background-color:#bebebe;
+    font-size:16px;
+    color:#cccccc;
+    background-color:#333333;
     text-align:center;
     padding:5px;
     text-decoration:none;
     text-transform:uppercase;
 }
 
-div#navfirst ul#menu li a:hover,div#navfirst ul#menu li a:active{
-    background:#cc0000;
-}
-
-div#logout a:link,div#logout a:visited,div#logout a:hover,div#logout a:active{
-    float:right;
-    width:36px;
-    height:30px;
-    color:#808080;
-    font-size:14px;
-    padding:3px;
-    text-decoration:none;
-    text-transform:uppercase;
+div.head-nav ul.head-nav-menu li a:hover,div.head-nav ul.head-nav-menu  li a:active{
+    background:#3D3D3D;
 }
 

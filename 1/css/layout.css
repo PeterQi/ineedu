@@ -4,43 +4,45 @@ body{
 	margin: 0;                   
     padding: 0;                   
 	text-align: center;           
-	font: 15px Arial,宋体;  
+	font: 15px Arial,宋体;
+    background-image:url(http://1.ineedu.sinaapp.com/image/background.jpg);
 }
 
+ul,li{
+    list-style-type:none;
+}
+
+div#headwrap{
+    width:760px;
+    height:56px;
+    padding:0px;
+    margin:0px;
+    border:0px;
+    background-color:#333333;
+    overflow: hidden;
+    border-bottom: #d6d6d6 0px solid;
+}
+div.head{
+    background-color:#333333;
+    overflow: hidden;
+    width:750px;    
+    height:30px;
+	margin: 13px 5px 13px 5px;
+    padding: 0px;
+    display: block;
+    clear: both;
+    text-align: left;
+}
+div.head-nav{
+    width:610px;
+    height:30px;
+    float:left;
+}
 div#container{  
-	width:760px;    
-    height:600px;
+	width:758px;    
+    height:598px;
 	margin:0 auto;
     border:1px solid #DBDBD0;
-}
-
-div#header{                   
-	float:left;                   
-	width:760px;   
-    height:30px;     
-}
-div#logo{                     
-	float:left;                   
-	width:150px;                
-	height:30px; 
-    line-height:30px;
-    font-size:29px;
-    font-weight:bold;
-    color:#808080;
-}
-div#banner{                   
-	float:left;            
-	width:400px; 
-    height:30px;
-    line-height:30px;
-}
-
-div#hi{
-    float:right;
-    width:50px;
-    height:30px;
-    line-height:30px;
-    padding:3px;
 }
 
 .gap {                          
@@ -49,34 +51,29 @@ div#hi{
 	width:100%;                  
 	overflow:hidden;             
 	clear:both;    
-}
-
-div#navfirst{
+} 
+div.head-nav ul.head-nav-menu{
     float:left;
-    width:100%;
-    height:30px;
-}
-
-div#navfirst ul#menu{
-    float:right;
     list-style:none;
-    width:600px;
+    width:610px;
+    height:30px;
     margin:0;
     padding:0;
     overflow:hidden;
 }
 
-div#navfirst ul#menu li{
+div.head-nav ul.head-nav-menu li{
     float:left;
 }
 
 div#content{
     position:absolute;
-    top:70px;
+    top:68px;
     float:left;
-    width:760px;
+    width:756px;
     height:530px;
-    border:1px solid #DBDBD0;
+    /*border:1px solid #DBDBD0;*/
+    overflow:overlay;
 }
 
 /************************登录界面***************************/
@@ -91,13 +88,12 @@ div#content{
 
 /************************许愿界面***************************/
 #w_content{
-    margin:0 0 0 0;
-    position:absolute;
-    left:179px;
-    width:400px;
-    height:530px;
-    border:1px solid #DBDBD0;
-    background-color:#BEBEBE;
+    margin:0 auto;
+    clear: both;
+    display: block;
+    overflow: hidden;
+    width:498px;
+    height:528px;
 }
 
 /******************支付界面*******************/
@@ -109,5 +105,153 @@ div#content{
     border:1px solid #DBDBD0;
     background-color:#ffffff;
 }
+/******************获取支付宝帐号*******************/
+.ali-account{
+    position:absolute;
+    top:150px;
+    left:250px;
+    width:260px;
+    height:200px;
+}
 
+.ali-account label{
+    width:260px;
+    height:35px;
+    line-height:35px;
+    float:left;
+    text-align:left;
+}
 
+.ali-account .input-t{
+    width:200px;
+    height:22px;
+    padding:3px 2px 0;
+    margin:3px 0;
+    border:2px solid #BEBEBE;
+    float: left;
+}
+
+.ali-account .input-s{
+    margin:5px auto;
+    width:208px;
+    height:25px;
+    float: left;
+}
+
+.ali-account .input{
+    width:260px;
+    height:35px;
+    line-height:35px;
+    float:left;
+    text-align:left;
+}
+/********************已支付的*********************/
+.changeaccount{
+    width:120px;
+    height:30px;
+    line-height:30px;
+    position:absolute;
+    left:640px;
+}
+/********************首页************************/
+div.wish-one{
+    width:600px;
+    height:120px;
+    margin:10px 35px;
+    padding:5px;
+    border:1px solid #DBDBD0;
+    color:#333333;
+}
+
+div.wish-one ul{
+    width:100%;
+    height:120px;
+    padding:0;
+    margin:0;
+}
+
+/*div.wish-list ul li,div.wish-list a,div.wish-one ul li{
+    display: block;
+    clear: both;
+}*/
+
+div.wish-one a img,div.myfrds-one a img{
+    width:50px;
+    height:50px;
+}
+
+.wish-usrimg{
+    width:50px;
+    height:50px;
+    float:left;
+    margin: 15px;
+}
+
+.wish-usrname{
+    width:150px;
+    height:30px;
+    line-height:30px;
+    float:left;
+    padding:0;
+    text-align:left;
+    position: relative;
+    top: 75px;
+    left: -65px;
+}
+
+.wish-name,.wish-info{
+    width:420px;
+    height:20px;
+    line-height:20px;
+    margin: 0 0 0 180px;
+    text-align:left;
+}
+/**********************我的愿望**********************/
+.mywish-one{
+    width: 500px;
+    height: 160px;
+    border: 1px solid #DBDBD0;
+    margin: 10px 148px 10px 88px;
+}
+
+.mywish-one ul{
+    width:500px;
+    height:160px;
+    margin:0;
+    padding:5px 10px;
+}
+
+.mywish-one li{
+    width:100%;
+    height:25px;
+    line-height:25px;
+    text-align:left;
+    color:#333333;
+}
+
+/**********************我支付的************************/
+.ipayed-one{
+    width:250px;
+    height:150px;
+    border: 1px solid #DBDBD0;
+    color:#333333;
+    margin: 10px 45px;
+    text-align:left;
+    float:left;
+}
+/***********************我关注的************************/
+.myfrds-one{
+    width:105px;
+    height:85px;
+    color:#333333;
+    float:left;
+}
+
+/***********************首页搜索*********************
+.head-nav-search{
+    height:30px;
+    width:100px;
+    margin:0;
+    padding:0;
+    float:right;
+}*/
